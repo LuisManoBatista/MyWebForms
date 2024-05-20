@@ -1,0 +1,41 @@
+﻿<%@ Import Namespace="MyWebForms.Core.Web" %>
+<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.Main.Master.cs" Inherits="MyWebForms.SiteMaster" %>
+<!DOCTYPE html>
+
+<html lang="en-gb">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%: Page.Title %> - My ASP.NET Application</title>
+
+    <asp:PlaceHolder runat="server">
+      <%: Scripts.Render("~/bundles/jquery") %>
+      <%: Scripts.Render("~/bundles/modernizr") %>
+      <%: Scripts.Render("~/bundles/WebFormsJs") %>
+      <%: Scripts.Render("~/bundles/MsAjaxJs") %>
+      <%: Styles.Render("~/Content/css") %>
+    </asp:PlaceHolder>
+    
+    <asp:ContentPlaceHolder ID="MainMasterHeader" runat="server">
+    </asp:ContentPlaceHolder>
+
+    <%--<webopt:bundlereference runat="server" path="~/Content/css" />--%>
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+</head>
+
+<body>
+    <div class="d-flex flex-column min-vh-100">
+        <div>
+            <asp:ContentPlaceHolder ID="MainMasterContent" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+         <% MvcUtility.RenderAction( "layout", "footer", new { }); %>
+    </div>
+    <asp:PlaceHolder runat="server">
+        <%: Scripts.Render("~/Scripts/bootstrap.js") %>
+        <asp:ContentPlaceHolder ID="MainMasterScripts" runat="server">
+        </asp:ContentPlaceHolder>
+   </asp:PlaceHolder>
+
+</body>
+</html>

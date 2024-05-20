@@ -1,0 +1,23 @@
+﻿<%@ Import Namespace="MyWebForms.Core.Web" %>
+<%@ Master Language="C#" AutoEventWireup="true"  MasterPageFile="~/Site.Main.Master" CodeBehind="Site.Master.cs" Inherits="MyWebForms.SiteMaster" %>
+
+<asp:Content ContentPlaceHolderID="MainMasterHeader" runat="server">
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</asp:Content>
+
+<asp:Content ContentPlaceHolderID="MainMasterContent" runat="server">
+    <form runat="server">
+        <% MvcUtility.RenderAction( "Layout", "navigation", new { }); %>
+
+        <div class="p-3">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</asp:Content>
+
+<asp:Content ContentPlaceHolderID="MainMasterScripts" runat="server">
+    <asp:ContentPlaceHolder ID="MainScripts" runat="server">
+    </asp:ContentPlaceHolder>
+</asp:Content>

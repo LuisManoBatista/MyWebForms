@@ -1,0 +1,64 @@
+﻿/* Wrapping element */
+/* Set some basic padding to keep content from hitting the edges */
+body {
+    margin: 0;
+    /*min-height: 100vh;
+    display: flex;
+    flex-direction: column;*/
+}
+
+footer {
+    /*flex-shrink: 0;*/
+    margin-top: auto;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+}
+
+.body-content {
+    /*flex: 1 0 auto;*/
+
+   /* margin-top: 12px;
+    margin-bottom: 12px;
+    padding-left: 15px;
+    padding-right: 15px;
+    flex-grow: 1;
+    overflow-y: auto;
+    display: flex !important;*/
+}
+
+/* Set widths on the form inputs since otherwise they're 100% wide */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+
+.bg-lightgrey {
+    background-color: lightgrey !important;
+}
+
+.nav-item .nav-link.btn-primary {
+    border: 1px solid darkgrey; /* Change the color as needed */
+    margin-right: 6px;
+    width: 90px;
+    text-align: center;
+}
+
+    .nav-item .nav-link.btn-primary:hover {
+        background-color: var(--bs-btn-hover-bg) !important; /* Change the color as needed */
+        color: white; /* Change the color to white when hovering */
+    }
+
+    .nav-item .nav-link.btn-primary.active {
+        background-color: lightblue; /* Change the color as needed */
+        border-color: lightblue;
+    }
+
+/* Responsive: Portrait tablets and up */
+/*@media screen and (min-width: 768px) {
+    .body-content {
+        padding: 0;
+    }
+}*/
